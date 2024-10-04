@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content= "width=device-width, initial-scale=1.0">
+    <title>Register</title>
+    <link rel="stylesheet" href="{{ url_for('static' filename='styles.css') }}">
+<head>
+<body>
+    <h1>Register</h1>
+    <from method="post" action="{{url_for('user_bp.register') }}">
+        <label for="nombre">nombre:</label>
+        <input type="text" id="apellido" nombre"nombre" required>
+        
+        <label for="apellido">apellido:</label>
+        <input type="apellido" id="apellido" nombre="apellido" required>
+        
+        <label for="apellido">apellido:</label>
+        <input type="apellido" id="apellido" nombre="apellido" required>
+        
+        <label for="cedula">cedula:</label>
+        <select id="cedula" nombre="nombre" required>
+            {%for cedula in cedula %}
+                <option value="{{ cedula.id}}">{{cedula.cedula_nombre }}</option>
+                {% endfor %}
+        </select>
+
+
+        <button type="submit">quines somos</button>
+    </from>
+    <p><a href="{{ url_for('user_bp.login') }}">Already have an account? Login here.</a></p>
+</body>
+</html>
